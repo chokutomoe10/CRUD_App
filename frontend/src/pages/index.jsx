@@ -45,7 +45,7 @@ export default function LandingPage() {
                     <SimpleGrid spacing={3} mt={6} templateColumns='repeat(auto-fill, minmax(200px, 1fr))'>
                         {products.map((item) => {
                             return (
-                                <Product item={item}/>
+                                <Product key={index} item={item}/>
                             )
                         })}
                     </SimpleGrid>
