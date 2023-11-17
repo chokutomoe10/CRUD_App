@@ -1,4 +1,4 @@
-import { Box, Center, Card, Container, Table, TableContainer, TableCaption, Thead, Tr, Td, Tbody, Tfoot, Th, GridItem, Flex, Text, Input, InputGroup, InputRightElement, Button } from "@chakra-ui/react"
+import { Box, Card, Table, TableContainer, Thead, Tr, Td, Tbody, Th, Flex, Text, Button } from "@chakra-ui/react"
 import { useState, useEffect } from "react"
 import { API } from "@/lib/api"
 
@@ -56,7 +56,7 @@ export default function ManajemenProduk() {
                             <Tbody>
                                 {products.map((item, index) => {
                                     return (
-                                        <Tr>
+                                        <Tr key={index}>
                                             <Td>{index}</Td>
                                             <Td>{item.name}</Td>
                                             <Td>{item.price}</Td>

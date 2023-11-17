@@ -1,4 +1,4 @@
-import { Box, Center, Card, Container, Grid, GridItem, Flex, Text, Input, InputGroup, InputRightElement, Button, Heading, Image, SimpleGrid } from "@chakra-ui/react"
+import { Box, Card, Flex, Text, Input, InputGroup, InputRightElement, Button, SimpleGrid } from "@chakra-ui/react"
 import { SearchIcon } from '@chakra-ui/icons'
 import Product from "@/components/Products"
 import { useEffect, useState } from "react"
@@ -54,9 +54,9 @@ export default function LandingPage() {
                 <Box>
                     <Text fontSize={'lg'} as={'b'}>Produk Tersedia</Text>
                     <SimpleGrid spacing={3} mt={6} templateColumns='repeat(auto-fill, minmax(200px, 1fr))'>
-                        {products.map((item) => {
+                        {products.map((item, index) => {
                             return (
-                                <Product item={item}/>
+                                <Product key={index} item={item}/>
                             )
                         })}
                     </SimpleGrid>
